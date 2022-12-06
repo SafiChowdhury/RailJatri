@@ -37,13 +37,11 @@ urlpatterns = [
     path('select_seat',search.seat_select,name='select_seat'),
     path('success',search.succesful,name='success'),
     path('tick_det',search.tick_details,name='tick_det'),
-<<<<<<< HEAD
     path('bkash_pay',pay_method.bkash,name='bkash_pay'),
     path('card_pay',pay_method.card,name='card_pay'),
     path('nexus_pay',pay_method.nexus,name='nexus_pay'),
     path('pay_select',pay_method.pay_cat,name='pay_select'),
     path('rocket_pay',pay_method.rocket,name='rocket_pay'),
-=======
 
     path('list_trains',list.list_train,name='list_trains'),
     path('previous', journey.prev,name='previous'),
@@ -59,5 +57,4 @@ urlpatterns = [
     path('forgetpass',passforget.forgetPass,name='forgetpass'),
     path('upcoming',journey.upcoming,name='upcoming'),
 
->>>>>>> 5bf86ca3b53257d5b34374eeef9cced5972005e2
 ]
