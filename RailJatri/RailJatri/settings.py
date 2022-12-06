@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'booking_tick',
+<<<<<<< HEAD
+    'payment_method',
+    
+=======
 
     'list_trains',
     'journey_schedule',
@@ -49,6 +53,7 @@ INSTALLED_APPS = [
     'forgetChangePass',
     'forgetPass',
 
+>>>>>>> 5bf86ca3b53257d5b34374eeef9cced5972005e2
 ]
 
 MIDDLEWARE = [

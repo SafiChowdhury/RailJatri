@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 import home.views as home_view
 import booking_tick.views as search
+import payment_method.views as pay_method
 
 import list_trains.views as list
 import journey_schedule.views as journey
@@ -36,6 +37,11 @@ urlpatterns = [
     path('select_seat',search.seat_select,name='select_seat'),
     path('success',search.succesful,name='success'),
     path('tick_det',search.tick_details,name='tick_det'),
+    path('bkash_pay',pay_method.bkash,name='bkash_pay'),
+    path('card_pay',pay_method.card,name='card_pay'),
+    path('nexus_pay',pay_method.nexus,name='nexus_pay'),
+    path('pay_select',pay_method.pay_cat,name='pay_select'),
+    path('rocket_pay',pay_method.rocket,name='rocket_pay'),
 
     path('list_trains',list.list_train,name='list_trains'),
     path('previous', journey.prev,name='previous'),
