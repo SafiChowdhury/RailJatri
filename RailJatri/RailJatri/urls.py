@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import home.views as home_view
+import booking_tick.views as search
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_view.home_page,name='home')
+    path('login',home_view.home_page,name='home'),
+    path('search_tick',search.booking_ticket,name='search_tick'),
+    path('select_seat',search.seat_select,name='select_seat'),
+    path('success',search.succesful,name='success'),
+    path('tick_det',search.tick_details,name='tick_det'),
+
 ]
