@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 import home.views as home_view
 import booking_tick.views as search
+import list_trains.views as list
+import journey_schedule.views as journey
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +27,7 @@ urlpatterns = [
     path('select_seat',search.seat_select,name='select_seat'),
     path('success',search.succesful,name='success'),
     path('tick_det',search.tick_details,name='tick_det'),
+    path('list_trains',list.list_train,name='list_trains'),
+    path('previous', journey.prev,name='previous'),
 
 ]

@@ -7,35 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>রেল যাত্রী</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{%static 'assets/bootstrap/css/bootstrap.min.css'%}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="{%static 'assets/css/Features-Boxed.css'%}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="{% static  'fonts/ionicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/Features-Boxed.css' %}">
-    <link rel="stylesheet" href="{% static "fonts/font-awesome.min.css"%}">
-    <link rel="stylesheet" href="{% static "fonts/ionicons.min.css"%}">
-    <link rel="stylesheet" href="assets/css/animation1.css">
+    <link rel="stylesheet" href="{%static 'assets/css/Login-Form-Dark.css'%}"/>
+    <link rel="stylesheet" href="{%static 'assets/fonts/font-awesome.min.css'%}"/>
+    <link rel="stylesheet" href="{%static 'assets/fonts/ionicons.min.css'%}"/>
+    <link rel="stylesheet" href="{%static 'assets/css/animation1.css'%}"/>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
     <title>Trains</title>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script>
+<!--    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>-->
+<!--    <script>-->
     AOS.init();
-    </script>
+<!--    </script>-->
 </head>
 
 <body style="border-style: none;font-family: Lato, sans-serif;">
 <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" style=" color: rgb(118,35,35);padding: 18.2px 0px;background: linear-gradient(47deg, rgb(240,255,234), rgb(240,255,234) 99%);">
             <div class="container">
-                <strong><img src="assets/img/logo.png" style="cursor:context-menu;width: 200px;height: 50px;margin-top: -20px;margin-bottom: -13px"></strong>
+                <strong><img src="{%static 'assets/img/logo.png'%}" style="cursor:context-menu;width: 200px;height: 50px;margin-top: -20px;margin-bottom: -13px"></strong>
                 <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
@@ -51,7 +49,7 @@
 
 <fieldset style="padding-top: 100px;">
 <div style="padding-top: 0px;">
-        <div class="container" style="background: url(&quot;assets/img/train6.jpg&quot;) center / cover no-repeat;">
+        <div class="container" style="background: url(&quot;{%static 'assets/img/train6.jpg'%}&quot;) center / cover no-repeat;">
             <section style="padding-top: 25px;background: rgba(0,0,0,0.85);padding-right: 20px;padding-left: 20px;">
                 <div class="row" style="padding-left: 10px;">
                     <div class="col" style="padding-left: 55px;">
@@ -295,47 +293,47 @@
 <marquee hspace="190px" behavior="scroll" direction="left" scrollamount="20"><label style="margin-left: 190px;margin-top: 20px;font-size: 24px"><strong>No available train from source to destination</strong></label>
 <svg xmlns="http://www.w3.org/2000/svg" style="margin-left:10px;padding-top: 0px" width="1em" height="2em" font-size="50px" viewBox="0 0 24 24" fill="none"><path d="M9 11C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10C8 10.5523 8.44772 11 9 11Z" fill="currentColor"></path><path d="M14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17H8C8 14.7909 9.79086 13 12 13C14.2091 13 16 14.7909 16 17H14Z" fill="currentColor"></path><path d="M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44772 14.4477 9 15 9C15.5523 9 16 9.44772 16 10Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" fill="currentColor"></path></svg>
 </marquee>
-    <main class="text-center page lanidng-page" style="margin-top:530px;text-align: center;padding: 22px 22px 22px;box-shadow: inset 0px 1px 10px 0px rgb(230,230,230);"><img src="assets/img/1.png"><img src="assets/img/2.png"><img src="assets/img/3.png"><img src="assets/img/4.png"><img src="assets/img/5.png"><img src="assets/img/6.png"></main>
+    <main class="text-center page lanidng-page" style="margin-top:530px;text-align: center;padding: 22px 22px 22px;box-shadow: inset 0px 1px 10px 0px rgb(230,230,230);"><img src="{%static 'assets/img/1.png'%}"><img src="{%static 'assets/img/2.png'%}"><img src="{%static 'assets/img/3.png'%}"><img src="{%static 'assets/img/4.png'%}"><img src="{%static 'assets/img/5.png'%}"><img src="{%static 'assets/img/6.png'%}"></main>
 {% endif %}
 
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-          <script>
-            AOS.init(
-                {
-                    offset: 50, // offset (in px) from the original trigger point
-                    once: true,
-                    duration: 1200, // values from 0 to 3000, with step 50ms
-                    delay: 0,
-                }
-            );
-          </script>
+<!--    <script src="assets/js/jquery.min.js"></script>-->
+<!--    <script src="assets/bootstrap/js/bootstrap.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>-->
+<!--    <script src="assets/js/theme.js"></script>-->
+<!--    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
+<!--          <script>-->
+<!--            AOS.init(-->
+<!--                {-->
+<!--                    offset: 50, // offset (in px) from the original trigger point-->
+<!--                    once: true,-->
+<!--                    duration: 1200, // values from 0 to 3000, with step 50ms-->
+<!--                    delay: 0,-->
+<!--                }-->
+<!--            );-->
+<!--          </script>-->
 </body>
-<script>
+<!--<script>-->
 
-    function getid(ID) {
-            var txt = document.getElementById(ID).id;
-            window.location.href = "{% url 'seat_selection' %}" +"?id="+txt;
-          }
-          function getname(ID) {
-            var text = document.getElementById(ID).id;
-            window.location.href = "{% url 'train' %}" +"?name="+'1'+text;
-          }
-          function getname2(ID) {
-            var text = document.getElementById(ID).id;
-            window.location.href = "{% url 'train' %}" +"?name="+'0'+text;
-          }
+<!--    function getid(ID) {-->
+<!--            var txt = document.getElementById(ID).id;-->
+<!--            window.location.href = "" +"?id="+txt;-->
+<!--          }-->
+<!--          function getname(ID) {-->
+<!--            var text = document.getElementById(ID).id;-->
+<!--            window.location.href = "" +"?name="+'1'+text;-->
+<!--          }-->
+<!--          function getname2(ID) {-->
+<!--            var text = document.getElementById(ID).id;-->
+<!--            window.location.href = "" +"?name="+'0'+text;-->
+<!--          }-->
 
-</script>
-<script>
-function logout() {
-            window.location.href = "{% url 'login' %}" +"?logged_out="+"1";
-          }
+<!--</script>-->
+<!--<script>-->
+<!--function logout() {-->
+<!--            window.location.href = "" +"?logged_out="+"1";-->
+<!--          }-->
 
-</script>
+<!--</script>-->
 
 </html>

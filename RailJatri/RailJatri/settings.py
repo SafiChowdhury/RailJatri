@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'booking_tick',
+    'list_trains',
+    'journey_schedule',
     
 ]
 
