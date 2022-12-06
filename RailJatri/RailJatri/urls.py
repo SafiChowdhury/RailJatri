@@ -17,8 +17,17 @@ from django.contrib import admin
 from django.urls import path
 import home.views as home_view
 import booking_tick.views as search
+
 import list_trains.views as list
 import journey_schedule.views as journey
+
+
+import change_profile.views as change
+import contactus.views as contactus
+import create_acc.views as registraion
+import forgetChangePass.views as forget
+import forgetPass.views as passforget
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,7 +36,19 @@ urlpatterns = [
     path('select_seat',search.seat_select,name='select_seat'),
     path('success',search.succesful,name='success'),
     path('tick_det',search.tick_details,name='tick_det'),
+
     path('list_trains',list.list_train,name='list_trains'),
     path('previous', journey.prev,name='previous'),
+
+
+    path('changemail',change.changeEmail,name='Email'),
+    path('changenum',change.changenum,name='Number'),
+    path('changepass',change.changePass,name='Password'),
+    path('infoupdate',change.updateInfo,name='Info'),
+    path('contactus',contactus.contactus,name='ContactUs'),
+    path('registration',registraion.registration,name='registration'),
+    path('passchange',forget.forgotChangepass,name='forgot'),
+    path('forgetpass',passforget.forgetPass,name='forgetpass'),
+    path('upcoming',journey.upcoming,name='upcoming'),
 
 ]
