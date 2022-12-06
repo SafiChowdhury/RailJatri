@@ -39,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'booking_tick',
+    'change_profile',
+    'contactus',
+    'create_acc',
+    'forgetChangePass',
+    'forgetPass',
+    'journey_schedule',
+
     
 ]
 
