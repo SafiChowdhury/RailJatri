@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -6,24 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>রেল যাত্রী</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{%static 'assets/bootstrap/css/bootstrap.min.css'%}"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="{%static 'assets/fonts/font-awesome.min.css'%}"/>
+    <link rel="stylesheet" href="{%static 'assets/css/Features-Boxed.css'%}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="assets/css/animation1.css">
+    <link rel="stylesheet" href="{%static 'assets/css/Login-Form-Dark.css'%}"/>
+    <link rel="stylesheet" href="{%static 'assets/css/animation1.css'%}"/>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+<!--    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>-->
+<!--    <script>-->
+<!--    AOS.init();-->
+<!--    </script>-->
 </head>
 
 <body style="font-family: Lato, sans-serif;">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" style="color: rgb(118,35,35);padding: 18.2px 0px;background: linear-gradient(47deg, rgb(240,255,234), rgb(240,255,234) 99%);">
             <div class="container">
-                <strong><img src="assets/img/logo.png" style="cursor:context-menu;width: 200px;height: 50px;margin-top: -20px;margin-bottom: -13px"></strong>
+                <strong><img src="{%static 'assets/img/logo.png'%}" style="cursor:context-menu;width: 200px;height: 50px;margin-top: -20px;margin-bottom: -13px"></strong>
                 <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
@@ -47,7 +48,7 @@
         <label id="LOADING2" data-aos="fade-down" data-aos-delay="0" data-aos-duration="300" style="margin-top: 0px;margin-left: 879.5px;width: 450px;height: 35px;background: #cf2222;text-align: left;padding-left: 10px;padding-top:5px;color: white"><strong>{{ statusred }}</strong></label>
     </div>
     {% endif %}
-        <div class="container" style="z-index: 1;background: url(&quot;assets/img/train6.jpg&quot;) center / cover no-repeat;">
+        <div class="container" style="z-index: 1;background: url(&quot;{%static 'assets/img/train6.jpg'%}&quot;) center / cover no-repeat;">
             <section style="padding-top: 25px;background: rgba(0,0,0,0.85);padding-right: 20px;padding-left: 20px;">
                 <h1 style="padding-bottom: 20px;color:white;font-size: 26px;">Personal Information</h1>
                 <div class="row" style="padding-left: 10px;">
@@ -151,67 +152,67 @@
     </div>
   </div>
 </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
-    <script src="assets/js/theme.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-          <script>
-            AOS.init(
-                {
-                    offset: 200, // offset (in px) from the original trigger point
-                    once: true,
-                    mirror:true,
-                    duration: 1500, // values from 0 to 3000, with step 50ms
-                }
-            );
-          </script>
+<!--    <script src="assets/js/jquery.min.js"></script>-->
+<!--    <script src="assets/bootstrap/js/bootstrap.min.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>-->
+<!--    <script src="assets/js/theme.js"></script>-->
+<!--    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
+<!--          <script>-->
+<!--            AOS.init(-->
+<!--                {-->
+<!--                    offset: 200, // offset (in px) from the original trigger point-->
+<!--                    once: true,-->
+<!--                    mirror:true,-->
+<!--                    duration: 1500, // values from 0 to 3000, with step 50ms-->
+<!--                }-->
+<!--            );-->
+<!--          </script>-->
 </body>
-<script>
-function logout() {
-            window.location.href = "{% url 'login' %}" +"?logged_out="+"1";
-          }
+<!--<script>-->
+<!--function logout() {-->
+<!--            window.location.href = "{}" +"?logged_out="+"1";-->
+<!--          }-->
 
-</script>
-<script>
-    setTimeout(function(){
-        document.getElementById('LOADING').style.display = 'none';
-    }, 4000);
-    </script>
-<script>
-    setTimeout(function(){
-        document.getElementById('LOADING2').style.display = 'none';
-    }, 4000);
-    </script>
-<script>
-document.getElementById("demo").onmouseover = function() {mouseOver()};
-document.getElementById("demo").onmouseout = function() {mouseOut()};
-document.getElementById("demo1").onmouseover = function() {mouseOver1()};
-document.getElementById("demo1").onmouseout = function() {mouseOut1()};
+<!--</script>-->
+<!--<script>-->
+<!--    setTimeout(function(){-->
+<!--        document.getElementById('LOADING').style.display = 'none';-->
+<!--    }, 4000);-->
+<!--    </script>-->
+<!--<script>-->
+<!--    setTimeout(function(){-->
+<!--        document.getElementById('LOADING2').style.display = 'none';-->
+<!--    }, 4000);-->
+<!--    </script>-->
+<!--<script>-->
+<!--document.getElementById("demo").onmouseover = function() {mouseOver()};-->
+<!--document.getElementById("demo").onmouseout = function() {mouseOut()};-->
+<!--document.getElementById("demo1").onmouseover = function() {mouseOver1()};-->
+<!--document.getElementById("demo1").onmouseout = function() {mouseOut1()};-->
 
-function mouseOver() {
-  document.getElementById("demo").style.background = "rgb(23, 143, 74)";
-  document.getElementById("demo").style.boxShadow="0px 2px 5px #696969";
-  document.getElementById("demo").style.color="white";
+<!--function mouseOver() {-->
+<!--  document.getElementById("demo").style.background = "rgb(23, 143, 74)";-->
+<!--  document.getElementById("demo").style.boxShadow="0px 2px 5px #696969";-->
+<!--  document.getElementById("demo").style.color="white";-->
 
-}
+<!--}-->
 
-function mouseOut() {
-  document.getElementById("demo").style.background = "#58a25b";
-  document.getElementById("demo").style.boxShadow="none";
-  document.getElementById("demo").style.color="black";
-}
-function mouseOver1() {
-  document.getElementById("demo1").style.background = "rgb(23, 143, 74)";
-  document.getElementById("demo1").style.boxShadow="0px 2px 5px #696969";
-  document.getElementById("demo1").style.color="white";
+<!--function mouseOut() {-->
+<!--  document.getElementById("demo").style.background = "#58a25b";-->
+<!--  document.getElementById("demo").style.boxShadow="none";-->
+<!--  document.getElementById("demo").style.color="black";-->
+<!--}-->
+<!--function mouseOver1() {-->
+<!--  document.getElementById("demo1").style.background = "rgb(23, 143, 74)";-->
+<!--  document.getElementById("demo1").style.boxShadow="0px 2px 5px #696969";-->
+<!--  document.getElementById("demo1").style.color="white";-->
 
-}
+<!--}-->
 
-function mouseOut1() {
-  document.getElementById("demo1").style.background = "#58a25b";
-  document.getElementById("demo1").style.boxShadow="none";
-  document.getElementById("demo1").style.color="black";
-}
-</script>
+<!--function mouseOut1() {-->
+<!--  document.getElementById("demo1").style.background = "#58a25b";-->
+<!--  document.getElementById("demo1").style.boxShadow="none";-->
+<!--  document.getElementById("demo1").style.color="black";-->
+<!--}-->
+<!--</script>-->
 </html>
