@@ -16,17 +16,17 @@
     <link rel="stylesheet" href="{%static 'assets/css/Login-Form-Dark.css'%}"/>
     <link rel="stylesheet" href="{%static 'assets/css/animation1.css'%}"/>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-<<<<<<< HEAD
+
     <!-- <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script> -->
-=======
+
 <!--    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>-->
 <!--    <script>-->
 <!--    AOS.init();-->
 <!--    </script>-->
->>>>>>> 5bf86ca3b53257d5b34374eeef9cced5972005e2
+
 </head>
 
 <body style="height: 940px;font-family: Lato, sans-serif">
@@ -63,11 +63,11 @@
               <strong><img src="{%static 'assets/img/logo.png'%}" style="cursor:context-menu;width: 200px;height: 50px;margin-top: -20px;margin-bottom: -13px"></strong>
                 <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
-                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="login" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log in</a></li>
-                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="registration" style="color: #070606;background-color: #f5fff1;padding: 0px;">Register</a></li>
-                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="updateinfo" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
-                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="contactus" style="color: #070606;background-color: #f5fff1;padding: 0px;">Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
+                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log in</a></li>
+                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'registration'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Register</a></li>
+                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'updateinfo'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
+                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'contactus'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Contact us</a></li>
                     <li class="nav-item" style="cursor:pointer;padding-right: 0px;"><a class="nav-link active link link-four pulse-grow-on-hover" onclick="logout()" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log out</a></li>
                 </ul>
         </div>
@@ -98,7 +98,6 @@
     </div>
   </div>
 </div>
-<<<<<<< HEAD
     <!-- <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
@@ -157,7 +156,7 @@ function logout() {
 <!--        function disableid()-->
 <!--        {-->
 <!--            var text="1";-->
-<!--            window.location.href="{% url 'bkash_payment' %}"+ "?disable=" + text;-->
+<!--            window.location.href="{}"+ "?disable=" + text;-->
 <!--        }-->
 
 <!--</script>-->
@@ -168,10 +167,10 @@ function logout() {
 <!--    </script>-->
 <!--    <script>-->
 <!--function logout() {-->
-<!--            window.location.href = "{% url 'login' %}" +"?logged_out="+"1";-->
+<!--            window.location.href = "{}" +"?logged_out="+"1";-->
 <!--          }-->
 
 <!--</script>-->
->>>>>>> 5bf86ca3b53257d5b34374eeef9cced5972005e2
+
 
 </html>
