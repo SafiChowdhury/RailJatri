@@ -28,6 +28,7 @@ import contactus.views as contactus
 import create_acc.views as registraion
 import forgetChangePass.views as forget
 import forgetPass.views as passforget
+import create_acc.views as views
 
 
 urlpatterns = [
@@ -56,5 +57,5 @@ urlpatterns = [
     path('passchange/',forget.forgotChangepass,name='passchange'),
     path('forgetpass/',passforget.forgetPass,name='forgetpass'),
     path('upcoming/',journey.upcoming,name='upcoming'),
-
+    path('saveenquiry/',views.saveEnquiry, name='saveenquiry')
 ]
