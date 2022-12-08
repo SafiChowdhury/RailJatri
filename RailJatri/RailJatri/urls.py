@@ -57,5 +57,5 @@ urlpatterns = [
     path('passchange/',forget.forgotChangepass,name='passchange'),
     path('forgetpass/',passforget.forgetPass,name='forgetpass'),
     path('upcoming/',journey.upcoming,name='upcoming'),
-    path('saveenquiry/',views.saveEnquiry, name='saveenquiry')
+    path('saveenquiry/',views.saveEnquiry, name='saveenquiry'),
 ]

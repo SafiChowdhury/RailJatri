@@ -22,7 +22,7 @@ def saveEnquiry(request):
         city = request.POST.get('city')
         mobile_No = request.POST.get('contact')
         password =request.POST.get('password')
-        # confirm_pass = request.POST.get('confirmpass')
+        confirm_pass = request.POST.get('confirmpass')
         
     #     en=passenger(first_name=first_name,last_name=last_name, date_birth= date_birth, gender= gender,email=email,Nid_No=Nid_No,house_no=houseNo,roadNo=roadNo, zipCode= zipCode,town=city,mobile_No=mobile_No,password=password,confirm_pass=confirm_pass)
         
@@ -36,7 +36,7 @@ def saveEnquiry(request):
         con = sqlite3.connect("db.sqlite3")
         cur = con.cursor()
         # sql1 = "SELECT email FROM create_acc_passenger WHERE email=%s"
-        cur.execute("SELECT email FROM create_acc_passenger WHERE email='email'")
+        cur.execute("SELECT email FROM create_acc_passenger WHERE email='?'",(email))
         result1 = cur.fetchall()
         cur.close()
 
@@ -80,14 +80,14 @@ def saveEnquiry(request):
 
                     cur = con.cursor()
                     # sql = "INSERT INTO create_acc_passenger VALUES(NVL((SELECT MAX(passenger_id)+1 FROM create_acc_passenger),1),%s,%s,%s,TO_DATE(%s,'YYYY-MM-DD'),CONCAT('+880',%s),%s,%s,%s,%s,%s,%s,%s);"
-                    cur.execute("INSERT INTO create_acc_passenger VALUES(NVL((SELECT MAX(tourist)+1 FROM create_acc_passenger),1),%s,%s,%s,date_birth(%s,'YYYY-MM-DD'),mobile_No('+880',%s),%s,%s,%s,%s,%s,%s,%s);"%pw_hash, first_name, last_name, date_birth, mobile_No, gender, email, Nid_No, houseNo, roadNo, zipCode, city)
-                    # result = cursor.fetchall()
+                    cur.execute("INSERT INTO create_acc_passenger (first_name,last_name, date_birth, gender,email,Nid_No,house_no,roadNo, zipCode,town,mobile_No,password,confirm_pass) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)",(first_name,last_name, date_birth, gender,email,Nid_No,houseNo,roadNo, zipCode,city,mobile_No,password,confirm_pass))
+                    con.commit()
                     cur.close()
                     # en.save()
-                    fullname = first_name + " " + last_name
-                    return redirect("/login" + "?user=" + fullname)
+                    # fullname = first_name + " " + last_name
+                    # return redirect("/login" + "?user=" + fullname)
                     # return render(request, 'login.html')
-    return render(request, 'registration.html')
+    return render(request, 'login.html')
     # #     en=passenger(first_name=first_name,last_name=last_name, date_birth= date_birth, gender= gender,email=email,Nid_No=Nid_No,house_no=houseNo,roadNo=roadNo, zipCode= zipCode,town=city,mobile_No=mobile_No,password=password,confirm_pass=confirm_pass)
     # #     en.save()
     # #     return render(request, 'login.html')
