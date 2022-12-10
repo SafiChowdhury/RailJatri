@@ -46,8 +46,6 @@ urlpatterns = [
 
     path('list_trains/',list.list_train,name='list_trains'),
     path('previous/', journey.prev,name='previous'),
-
-    #path('search/',home_view.login1,name='search'),
     path('changemail/',change.changeEmail,name='changemail'),
     path('changenum/',change.changenum,name='changenum'),
     path('changepass',change.changePass,name='changepass'),

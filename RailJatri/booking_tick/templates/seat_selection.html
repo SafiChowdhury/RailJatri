@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
                     <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="login" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log in</a></li>
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="registration" style="color: #070606;background-color: #f5fff1;padding: 0px;">Register</a></li>
-                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="updateinfo" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="infoupdate" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
                     <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="contactus" style="color: #070606;background-color: #f5fff1;padding: 0px;">Contact us</a></li>
                     <li class="nav-item" style="cursor:pointer;padding-right: 0px;"><a class="nav-link active link link-four pulse-grow-on-hover" onclick="logout()" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log out</a></li>
                 </ul>
@@ -86,14 +86,19 @@
             </section>
         </div>
     </div>
-        <div class="toggle"  style="margin-left: 185px;margin-top: 10px;"><input onclick="large()" type="radio" id="cond_new" data-toggle="collapse" data-target="#collapseExample.show" aria-expanded="false" aria-controls="collapseExample" name="bike_cond" checked="checked" ><label for="cond_new">Auto</label><input onclick="small()" type="radio" id="cond_used" name="bike_cond" data-toggle="collapse" data-target="#collapseExample:not(.show)" aria-expanded="false" aria-controls="collapseExample"><label for="cond_used">Manual</label>
+        <!-- <div class="toggle"  style="margin-left: 185px;margin-top: 10px;"><input onclick="large()" type="radio" id="cond_new" data-toggle="collapse" data-target="#collapseExample.show" aria-expanded="false" aria-controls="collapseExample" name="bike_cond" checked="checked" ><label for="cond_new">Auto</label><input onclick="small()" type="radio" id="cond_used" name="bike_cond" data-toggle="collapse" data-target="#collapseExample:not(.show)" aria-expanded="false" aria-controls="collapseExample"><label for="cond_used">Manual</label> -->
         </div>
     </fieldset>
-    <div style="height: 100px; margin-left:185px;margin-top: -15px;"><label style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;">Passenger Details</label>
-        <div style="height: 24px;"><label style="width: 400px">Name:  {{ full }}</label><label style="margin-left: 300px;">Mobile:  {{ mobile }}</label></div>
-        <div style="height: 24px;"><label style="width: 400px">Email:  {{ mail }}</label><label style="margin-left: 300px;">Address:  {{ address }}</label></div>
+    <div style="height: 100px; margin-left:380px;margin-top: 50px;"><label style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;">Passenger Details</label>
+        {% csrf_token %}
+        {% for i in f_name %}
+        <div style="height: 24px;"><label style="width: 400px">Name:  {{ i.first_name }}</label></div>
+        {% endfor %}
+        {% for i in email %}
+        <div style="height: 24px;"><label style="width: 400px">Email:  {{ i.email }}</label></div>
+        {% endfor %}
     </div>
-    <div id="height1" style="height: 350px;">
+    <!-- <div id="height1" style="height: 350px;">
         <div class="float-left" style="height: 1010.4px;">
             <div class="container collapse animate__animated animate__fadeInLeft" id="collapseExample"  style="margin-left: 165px;">
                 <div class="table-responsive"   style="width: 100%;padding: 0px;">
@@ -654,8 +659,8 @@
                     </table>
                 </div>
             </div>
-        </div>
-        <div class="float-left" id="div1" style="width: 620px;height: 300px;margin-left: 185px;margin-top: -8px;"><label id="label1" style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;">Ticket Details</label>
+        </div> -->
+        <div class="float-left" id="div1" style="width: 620px;height: 300px;margin-left: 380px;margin-top: -8px;"><label id="label1" style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;">Ticket Details</label>
             <div style="height: 24px;"><label>&nbsp;Train name:  {{ train_name }}</label></div>
             <div style="height: 24px;"><label>&nbsp;Adult:  {{ adult }}</label></div>
             <div style="height: 24px;"><label>&nbsp;Child:  {{ child }}</label></div>

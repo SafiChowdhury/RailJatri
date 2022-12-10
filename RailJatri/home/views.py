@@ -6,11 +6,6 @@ from .forms import loginUser
 # Create your views here.
 
 def home_page(request):
-
-    return render(request,'login.html')
-
-def login1(request):
-
     if request.method == "POST":
 
         username = request.POST.get('username')
@@ -22,3 +17,6 @@ def login1(request):
     context = {}
 
     return render(request,'login.html')
+
+
+
