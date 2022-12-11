@@ -1,12 +1,12 @@
 from django.shortcuts import render , redirect
 from django.db import connection
-from .models import station_name,journey,passenger_details
+from .models import station_name,journey
 from django.contrib.auth.models import User
-
 import sqlite3
 def booking_ticket(request):
     name = station_name.objects.all()
-
+    current_user = request.user
+    user_name = current_user.username
     if request.method == "POST":
         from12= request.POST.get('from')
         to= request.POST.get('to')
@@ -14,17 +14,22 @@ def booking_ticket(request):
         chair = request.POST.get('class')
         adult =request.POST.get('adult')
         child = request.POST.get('child')
+        temp = int(child) + int(adult)
 
-        ticket = journey(from12=from12,to=to,journey_date=journey_date,adult=adult,child=child,chair=chair)
+        ticket = journey(from12=from12,to=to,journey_date=journey_date,adult=adult,child=child,chair=chair,passenger_name=user_name)
         ticket.save()
 
-        return redirect('select_seat')
+        return render(request,'select_seat', {'from':from12,'to':to,'date':journey_date,'chair':chair,'adult':adult,'child':child})
 
     return render(request, 'search.html', {'station_name': name})
 
 def seat_select(request):
-    passenger_name= passenger_details.objects.all()
-    return render(request,'seat_selection.html',{'f_name':passenger_name})
+#     current_user= request.user
+#     user_id = current_user.first_name
+#     user_name = current_user.username
+#     user_email= current_user.email
+#     info = journey.objects.all()
+    return render(request,'seat_selection.html',{'first_name':user_id,'email':user_email,'info':info})
 # def list_trains(request):
 #     if request.method == "POST":
 #         if request.session.get('is_logged_in')!="1":

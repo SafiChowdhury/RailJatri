@@ -54,36 +54,54 @@
 
 
         <div class="container" style="z-index:1;background: url(&quot;{%static 'assets/img/train6.jpg'%}&quot;) center / cover no-repeat;">
+
             <section style="padding-top: 25px;background: rgba(0,0,0,0.85);padding-right: 20px;padding-left: 20px;">
                 <div class="row" style="padding-left: 10px;">
+
                     <div class="col">
+
+
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-location" style="width: 20px;height: 20px;margin-right: 5px;margin-left: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>From:</h1>
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{from}}</p>
+                            {% for i in from %}
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.from12}}</p>
+                            {% endfor %}
                     </div>
                     <div class="col" style="margin-bottom: 10px">
-                        <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-location" style="width: 20px;height: 20px;margin-right: 5px;margin-left: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>To</h1>
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{to}}</p>
+                        <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-location" style="width: 20px;height: 20px;margin-right: 5px;margin-left: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>To:</h1>
+                        {% for i in to %}
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.to}}</p>
+                        {% endfor %}
                     </div>
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-calendar-times-o" style="margin-right: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>Date:</h1>
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{date}}</p>
+                        {% for i in date %}
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.journey_date}}</p>
+                        {% endfor %}
                     </div>
                     </div>
                 <div class="row" style="padding-left: 10px;padding-bottom: 0px;">
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-train" style="margin-right: 5px;color: rgb(255,255,255);"></i>Class:</h1>
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{class}}</p>
+                        {% for i in chair %}
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.chair}}</p>
+                        {% endfor %}
                     </div>
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-person" style="margin-right: 5px;color: rgb(255,255,255);"></i>Adult:</h1>
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{adult}}</p>
+                        {% for i in adult %}
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.adult}}</p>
+                        {% endfor %}
                     </div>
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-child" style="margin-right: 5px;color: rgb(255,255,255);"></i>Child:</h1>
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{child}}</p>
+                        {% for i in child %}
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.child}}</p>
+                        {% endfor %}
                     </div>
+
                 </div>
             </section>
+
         </div>
     </div>
         <!-- <div class="toggle"  style="margin-left: 185px;margin-top: 10px;"><input onclick="large()" type="radio" id="cond_new" data-toggle="collapse" data-target="#collapseExample.show" aria-expanded="false" aria-controls="collapseExample" name="bike_cond" checked="checked" ><label for="cond_new">Auto</label><input onclick="small()" type="radio" id="cond_used" name="bike_cond" data-toggle="collapse" data-target="#collapseExample:not(.show)" aria-expanded="false" aria-controls="collapseExample"><label for="cond_used">Manual</label> -->
@@ -91,12 +109,9 @@
     </fieldset>
     <div style="height: 100px; margin-left:380px;margin-top: 50px;"><label style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;">Passenger Details</label>
         {% csrf_token %}
-        {% for i in f_name %}
-        <div style="height: 24px;"><label style="width: 400px">Name:  {{ i.first_name }}</label></div>
-        {% endfor %}
-        {% for i in email %}
-        <div style="height: 24px;"><label style="width: 400px">Email:  {{ i.email }}</label></div>
-        {% endfor %}
+
+        <div style="height: 24px;"><label style="width: 400px">Name:  {{ first_name }}</label></div>
+        <div style="height: 24px;"><label style="width: 400px">Email:  {{ email }}</label></div>
     </div>
     <!-- <div id="height1" style="height: 350px;">
         <div class="float-left" style="height: 1010.4px;">
