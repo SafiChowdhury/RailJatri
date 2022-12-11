@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(station_name)
 
 admin.site.register(train_name)
+admin.site.register(chair_class)

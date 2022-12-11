@@ -5,35 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a1c4d2e-e7e3-4840-b11d-4475854e9390" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RailJatri/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/seat_selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/seat_selection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/successful.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/successful.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/templates/changemail.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/changemail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/templates/updateinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/updateinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/contactus/templates/contactus.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/contactus/templates/contactus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/static/assets/css/animation1.css" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/static/assets/css/animation1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/static/assets/css/registerpagebutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/static/assets/css/registerpagebutton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/forgetChangePass/templates/forgetchangepass.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/forgetChangePass/templates/forgetchangepass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/forgetPass/templates/forgetpass.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/forgetPass/templates/forgetpass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/home/templates/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/Trash/email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/home/templates/fgpass_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/Trash/fgpass_email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/home/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/home/templates/verificationemmail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Trash/verificationemmail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/templates/prev.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/journey_schedule/templates/prev.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/templates/upcoming.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/journey_schedule/templates/upcoming.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/list_trains/templates/list_trains.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/list_trains/templates/list_trains.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/payment_method/templates/bkash_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/payment_method/templates/bkash_payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/payment_method/templates/card_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/payment_method/templates/card_payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/payment_method/templates/nexus_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/payment_method/templates/nexus_payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/payment_method/templates/payment selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/payment_method/templates/payment selection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/payment_method/templates/rocket_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/payment_method/templates/rocket_payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

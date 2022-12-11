@@ -29,9 +29,7 @@ def seat_select(request):
     user_name = current_user.username
     user_email= current_user.email
     info = journey.objects.filter(passenger_nm=user_name).last()
-    train_info = train_name.objects.all()
-    if info.from12 == '' and info.to == 'Chittagong':
-        pass
+    # train_info = train_info.objects.raw('SELECT * FROM booking_tick_train_name WHERE=%s')
     return render(request,'seat_selection.html',{'first_name':user_id,'email':user_email,'info':info})
 # def list_trains(request):
 #     if request.method == "POST":

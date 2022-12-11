@@ -15,10 +15,13 @@ class journey(models.Model):
 class station_name(models.Model):
     name= models.CharField(max_length=15)
 
+class chair_class(models.Model):
+    chair_class = models.CharField(max_length=15)
+    fare = models.IntegerField(default=000)
 class train_name(models.Model):
     name_train = models.CharField(max_length=20)
     train_number = models.IntegerField()
     time_train = models.TimeField(default="00:00:00")
     place = models.CharField(max_length=15,default='_TO_')
     arraival_time = models.TimeField(default='00:00:00')
-    fare = models.IntegerField(default=000)
+    from_dist = models.CharField(max_length=15,default='from')
