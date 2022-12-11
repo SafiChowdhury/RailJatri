@@ -20,7 +20,7 @@ class train_info(models.Model):
     name_train = models.CharField(max_length=20)
     train_number = models.IntegerField()
     time_train = models.TimeField(default="00:00:00")
-    place = models.CharField(max_length=15,default='_TO_')
+    Dest = models.CharField(max_length=15,default='_TO_')
     arraival_time = models.TimeField(default='00:00:00')
     place = models.CharField(max_length=15,default='from')
     chair_class = models.CharField(max_length=15)
