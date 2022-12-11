@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 from django.db import connection
-from .models import station_name,journey,train_name
+from .models import station_name,journey,train_info
 from django.contrib.auth.models import User
 import sqlite3
 def booking_ticket(request):
@@ -20,6 +20,7 @@ def booking_ticket(request):
         ticket.save()
 
         return redirect('select_seat')
+    info1 = journey.objects.filter(passenger_nm=user_name).last()
 
     return render(request, 'search.html', {'station_name': name})
 
