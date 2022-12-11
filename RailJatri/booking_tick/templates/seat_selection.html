@@ -34,11 +34,11 @@
                 <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
-                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="login" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log in</a></li>
-                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="registration" style="color: #070606;background-color: #f5fff1;padding: 0px;">Register</a></li>
+                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log in</a></li>
+                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="{%url 'registration'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Register</a></li>
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="infoupdate" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
-                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="contactus" style="color: #070606;background-color: #f5fff1;padding: 0px;">Contact us</a></li>
-                    <li class="nav-item" style="cursor:pointer;padding-right: 0px;"><a class="nav-link active link link-four pulse-grow-on-hover" onclick="logout()" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log out</a></li>
+                    <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="{%url 'contactus'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Contact us</a></li>
+                    <li class="nav-item" style="cursor:pointer;padding-right: 0px;"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log out</a></li>
                 </ul>
         </div>
             </div>
@@ -62,41 +62,41 @@
 
 
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-location" style="width: 20px;height: 20px;margin-right: 5px;margin-left: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>From:</h1>
-                            {% for i in from %}
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.from12}}</p>
-                            {% endfor %}
+
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.from12}}</p>
+
                     </div>
                     <div class="col" style="margin-bottom: 10px">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-location" style="width: 20px;height: 20px;margin-right: 5px;margin-left: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>To:</h1>
-                        {% for i in to %}
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.to}}</p>
-                        {% endfor %}
+
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.to}}</p>
+
                     </div>
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-calendar-times-o" style="margin-right: 5px;background: rgba(255,255,255,0);color: rgb(255,255,255);"></i>Date:</h1>
-                        {% for i in date %}
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.journey_date}}</p>
-                        {% endfor %}
+
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.journey_date}}</p>
+
                     </div>
                     </div>
                 <div class="row" style="padding-left: 10px;padding-bottom: 0px;">
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-train" style="margin-right: 5px;color: rgb(255,255,255);"></i>Class:</h1>
-                        {% for i in chair %}
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.chair}}</p>
-                        {% endfor %}
+
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.chair}}</p>
+
                     </div>
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-person" style="margin-right: 5px;color: rgb(255,255,255);"></i>Adult:</h1>
-                        {% for i in adult %}
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.adult}}</p>
-                        {% endfor %}
+
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.adult}}</p>
+
                     </div>
                     <div class="col">
                         <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-child" style="margin-right: 5px;color: rgb(255,255,255);"></i>Child:</h1>
-                        {% for i in child %}
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{i.child}}</p>
-                        {% endfor %}
+
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.child}}</p>
+
                     </div>
 
                 </div>
