@@ -67,7 +67,7 @@ urlpatterns = [
     # path('forgetpass/',passforget.forgetPass,name='forgetpass'),
     path('upcoming/',journey.upcoming,name='upcoming'),
     #path('saveenquiry/',views.saveEnquiry, name='saveenquiry'),
-
+    # path('pdf_view/',search.ViewPDF.as_view(),name='pdf_view'),
     path('password_reset/', SendEmailToResetPassword.as_view(), name='password_reset'),
     path('password_reset/done/', PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', ResetPasswordConfirm.as_view(), name='password_reset_confirm'),

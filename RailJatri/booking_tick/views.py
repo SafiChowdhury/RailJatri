@@ -1,8 +1,22 @@
 from django.shortcuts import render , redirect
 from django.db import connection
 from .models import station_name,journey,train_info,ticket_info
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+from django.views import View
 from django.contrib.auth.models import User
 import sqlite3
+def render_to_pdf(template_src,context_dist={}):
+    template = get_template(template_src)
+    html = template.render(context_dist)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")),result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(),content_type='application/pdf')
+    return None
+
 def booking_ticket(request):
     name = station_name.objects.all()
     current_user = request.user
@@ -47,8 +61,7 @@ def seat_select(request):
     return render(request,'seat_selection.html',{'first_name':user_id,'email':user_email,'info':infos,'name':train_i,'fare':price})
 
 
-def tick_details(request):
-    return render(request,'ticket.html')
+
 def pay_cat(request):
     current_user = request.user
     user_name = current_user.username
@@ -70,7 +83,28 @@ def succesful(request):
     current_user = request.user
     user_name = current_user.username
     infos = ticket_info.objects.filter(passenger_un=user_name).last()
-    j_date = journey.objects.filter(passenger_nm=user_name).last()
+
     if request.method == "POST":
         return redirect('tick_det')
-    return render(request, 'successful.html', {'info': infos},{'date':j_date})
+    return render(request, 'successful.html', {'info': infos})
+
+
+# class ViewPDF(View):
+#     def get(self, request, *args, **kwargs):
+#         current_user = request.user
+#         user_name = current_user.username
+#         infos = ticket_info.objects.filter(passenger_un=user_name).last()
+#         j_date = journey.objects.filter(passenger_nm=user_name).last()
+#         data={
+#             'info': infos,
+#             'date': j_date,
+#         }
+#         pdf = render_to_pdf('ticket.html',data)
+#         return HttpResponse(pdf, content_type='application/pdf')
+
+def tick_details(request):
+    current_user = request.user
+    user_name = current_user.username
+    infos = ticket_info.objects.filter(passenger_un=user_name).last()
+    j_date = journey.objects.filter(passenger_nm=user_name).last()
+    return render(request,'ticket.html',{'info': infos,'date': j_date})
