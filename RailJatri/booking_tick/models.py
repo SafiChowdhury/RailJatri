@@ -9,6 +9,7 @@ class journey(models.Model):
     adult = models.IntegerField()
     child = models.IntegerField()
     chair = models.CharField(max_length=15, default='class')
+    total = models.IntegerField(default=0)
 
 
 
@@ -25,3 +26,8 @@ class train_info(models.Model):
     place = models.CharField(max_length=15,default='from')
     chair_class = models.CharField(max_length=15)
     fare = models.IntegerField(default=000)
+
+class ticket_info(models.Model):
+    cost = models.IntegerField()
+    passenger_name = models.CharField(max_length=20)
+    passenger_mail = models.CharField(max_length=30)

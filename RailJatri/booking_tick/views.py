@@ -1,6 +1,6 @@
 from django.shortcuts import render , redirect
 from django.db import connection
-from .models import station_name,journey,train_info
+from .models import station_name,journey,train_info,ticket_info
 from django.contrib.auth.models import User
 import sqlite3
 def booking_ticket(request):
@@ -16,11 +16,11 @@ def booking_ticket(request):
         child = request.POST.get('child')
         temp = int(child) + int(adult)
 
-        ticket = journey(from12=from12,to=to,journey_date=journey_date,adult=adult,child=child,chair=chair,passenger_nm=user_name)
+        ticket = journey(from12=from12,to=to,journey_date=journey_date,adult=adult,child=child,chair=chair,passenger_nm=user_name,total=temp)
         ticket.save()
 
         return redirect('select_seat')
-    info1 = journey.objects.filter(passenger_nm=user_name).last()
+
 
     return render(request, 'search.html', {'station_name': name})
 
@@ -29,9 +29,15 @@ def seat_select(request):
     user_id = current_user.first_name
     user_name = current_user.username
     user_email= current_user.email
-    info = journey.objects.filter(passenger_nm=user_name).last()
-    # train_info = train_info.objects.raw('SELECT * FROM booking_tick_train_name WHERE=%s')
-    return render(request,'seat_selection.html',{'first_name':user_id,'email':user_email,'info':info})
+    infos = journey.objects.filter(passenger_nm=user_name).last()
+    x = str(infos.to)
+    y = str(infos.chair)
+    z = int(infos.total)
+    train_i = train_info.objects.filter(place=x).last()
+    tick = train_info.objects.filter(place=x).filter(chair_class=y).last()
+    #    return render(request, 'seat_selection.html',context)
+
+    return render(request,'seat_selection.html',{'first_name':user_id,'email':user_email,'info':infos,'name':train_i,'fare':tick})
 # def list_trains(request):
 #     if request.method == "POST":
 #         if request.session.get('is_logged_in')!="1":
