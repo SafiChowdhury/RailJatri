@@ -87,15 +87,9 @@
 
                     </div>
                     <div class="col">
-                        <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-person" style="margin-right: 5px;color: rgb(255,255,255);"></i>Adult:</h1>
+                        <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="icon ion-person" style="margin-right: 5px;color: rgb(255,255,255);"></i>Total Seat:</h1>
 
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.adult}}</p>
-
-                    </div>
-                    <div class="col">
-                        <h1 style="font-size: 16px;color: rgb(118,118,118);"><i class="fa fa-child" style="margin-right: 5px;color: rgb(255,255,255);"></i>Child:</h1>
-
-                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.child}}</p>
+                        <p style="font-size: 16px;color: rgb(255,255,255);padding-bottom: 5px;">{{info.total}}</p>
 
                     </div>
 
@@ -675,20 +669,22 @@
                 </div>
             </div>
         </div> -->
+     <form action="" method="POST">
+         {%  csrf_token %}
         <div class="float-left" id="div1" style="width: 620px;height: 300px;margin-left: 380px;margin-top: -8px;"><label id="label1" style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;">Ticket Details</label>
             <div style="height: 24px;"><label>&nbsp;Train name:  {{ name.name_train }}</label></div>
-            <div style="height: 24px;"><label>&nbsp;Adult:  {{ info.adult }}</label></div>
-            <div style="height: 24px;"><label>&nbsp;Child:  {{ info.child }}</label></div>
+            <div style="height: 24px;"><label>&nbsp;Total Seat:  {{ info.total }}</label></div>
 
-            <div style="height: 24px;"><label>&nbsp;Total cost:  {{fare.fare}} BDT</label></div>
+            <div style="height: 24px;"><label>&nbsp;Total cost:  {{fare}} BDT</label></div>
 
             <div style="height: 24px;"><label id="label2" style="padding-left:5px;width: 1145px;background: #bec5ba;color: black;margin-top: 10px;">Review The Rules And Restrictions</label></div>
             <ul style="margin-top: 22px;padding-left: 15px;">
                 <li>Terms and conditions are applicable</li>
                 <li style="width: 520px;">Tickets are non-transferable and name changes are not allowed</li>
             </ul>
-            <button class="btn btn-primary float-right" type="button" data-toggle="modal" data-target="#exampleModalScrollable" style="border-radius: 5px;background:#58a25b;color: white;margin-left: 20px;margin-top: 5px;">Buy Ticket</button></div>
-    </div>
+            <button class="btn btn-primary float-right" type="submit" data-toggle="modal" data-target="#exampleModalScrollable" style="border-radius: 5px;background:#58a25b;color: white;margin-left: 20px;margin-top: 5px;">Buy Ticket</button></div>
+        </div>
+     </form>
 
    <!-- Modal -->
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">

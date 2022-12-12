@@ -37,7 +37,7 @@
     {% else %}
     <div class="contact-clean" style="background: url(&quot;{%static 'assets/img/train6.jpg'%}&quot;);height:940px;padding-top: 150px;">
     {% endif %}
-        <form action="" method="post" style="border-top-color: rgb(206,212,218);padding-top: 40px;">
+        <form action="" method="POST" style="border-top-color: rgb(206,212,218);padding-top: 40px;">
             {%  csrf_token %}
             <h2 class="text-center"><img src="{%static 'assets/img/bkash.png'%}" style="width: 100px;height: 100px;"></h2>
             <div class="form-group"><label>Mobile Account</label><input class="form-control" type="text" pattern="\d*" title="Input can be only numbers" name="name" maxlength="11" minlength="11" required ></div>
@@ -45,14 +45,9 @@
             <div class="form-group"><label>PIN</label><input class="form-control" type="password" name="password" pattern="\d*" title="Input can be only numbers" maxlength="4" minlength="4" required ></div>
 
             <div class="form-group">
-                {% if amount %}
-                <label style="width: 400px;margin-top: 10px;margin-bottom: 12px;">Amount: {{ amount }}</label>
-                {% else %}
-                <label style="width: 400px;margin-top: 10px;margin-bottom: 12px;">Amount:</label>
-                {% endif %}
+                <label style="width: 400px;margin-top: 10px;margin-bottom: 12px;">Amount: {{ tk.cost }}</label>
                 <label style="width: 400px;">Currency: BDT</label></div>
-            <button class="btn btn-primary" name="btn1" id= "btn1" type="submit" style="width: 400px;font-size: 16px;background:linear-gradient(rgb(88,162,91),rgb(88,162,91),rgb(88,162,91));filter: brightness(102%);text-transform: capitalize;border-radius: 5px;">Send verification code</button>
-            <button class="btn btn-primary" name="btn2" type="button" data-toggle="modal" data-target="#exampleModalCenter" style="width: 400px;font-size: 16px;background:linear-gradient(rgb(88,162,91),rgb(88,162,91),rgb(88,162,91));filter: brightness(102%);text-transform: capitalize;border-radius: 5px;">Enter verification code</button>
+            <button class="btn btn-primary" name="btn1" id= "btn1" type="submit" style="width: 400px;font-size: 16px;background:linear-gradient(rgb(88,162,91),rgb(88,162,91),rgb(88,162,91));filter: brightness(102%);text-transform: capitalize;border-radius: 5px;">Submit</button>
         </form>
 
 
@@ -66,7 +61,7 @@
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Home</a></li>
                     <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log in</a></li>
                     <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'registration'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Register</a></li>
-                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'updateinfo'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'infoupdate'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Dashboard</a></li>
                     <li class="nav-item" style="color: #070606;"><a class="nav-link active link link-four pulse-grow-on-hover" href="{% url 'contactus'%}" style="color: #070606;background-color: #f5fff1;padding: 0px;">Contact us</a></li>
                     <li class="nav-item" style="cursor:pointer;padding-right: 0px;"><a class="nav-link active link link-four pulse-grow-on-hover" href="http://127.0.0.1:8000/" style="color: #070606;background-color: #f5fff1;padding: 0px;">Log out</a></li>
                 </ul>
@@ -75,29 +70,24 @@
         </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
+<!--<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">-->
+<!--  <div class="modal-dialog modal-dialog-centered" role="document">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="" method="post">
-        {%  csrf_token %}
-        <div class="form-group">
-            <label for="exampleInputPassword1">Enter Verification Code:</label>
-            <input type="password" name="otpin" class="form-control" id="exampleInputPassword1" placeholder="OTP" pattern="\d*" title="Input can be only numbers" maxlength="4" minlength="4" required>
-         </div>
-            <button type="submit" name="btn3" class="btn btn-primary" style="margin-top: 5px; width:100%; background: #58a25b;border-radius: 5px;">Submit</button>
-        </form>
-      </div>
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <form action="" method="post">-->
+<!--            <button type="submit" name="btn3" class="btn btn-primary" style="margin-top: 5px; width:100%; background: #58a25b;border-radius: 5px;">Submit</button>-->
+<!--        </form>-->
+<!--      </div>-->
 
-    </div>
-  </div>
-</div>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
     <!-- <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>

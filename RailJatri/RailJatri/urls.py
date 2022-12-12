@@ -49,10 +49,10 @@ urlpatterns = [
     path('select_seat/',search.seat_select,name='select_seat'),
     path('success/',search.succesful,name='success'),
     path('tick_det/',search.tick_details,name='tick_det'),
-    path('bkash_pay/',pay_method.bkash,name='bkash_pay'),
+    path('bkash_pay/',search.bkash,name='bkash_pay'),
     path('card_pay/',pay_method.card,name='card_pay'),
     path('nexus_pay/',pay_method.nexus,name='nexus_pay'),
-    path('pay_select/',pay_method.pay_cat,name='pay_select'),
+    path('pay_select/',search.pay_cat,name='pay_select'),
     path('rocket_pay/',pay_method.rocket,name='rocket_pay'),
 
     path('list_trains/',list.list_train,name='list_trains'),

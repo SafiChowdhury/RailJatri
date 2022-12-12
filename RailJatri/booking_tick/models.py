@@ -6,13 +6,8 @@ class journey(models.Model):
     from12 = models.CharField(max_length=15)
     to = models.CharField(max_length=15)
     journey_date = models.DateField()
-    adult = models.IntegerField()
-    child = models.IntegerField()
     chair = models.CharField(max_length=15, default='class')
     total = models.IntegerField(default=0)
-
-
-
 class station_name(models.Model):
     name= models.CharField(max_length=15)
 
@@ -26,8 +21,18 @@ class train_info(models.Model):
     place = models.CharField(max_length=15,default='from')
     chair_class = models.CharField(max_length=15)
     fare = models.IntegerField(default=000)
+    to = models.CharField(max_length=15,default="to")
 
 class ticket_info(models.Model):
     cost = models.IntegerField()
     passenger_name = models.CharField(max_length=20)
-    passenger_mail = models.CharField(max_length=30)
+    train_name = models.CharField(max_length=30)
+    dest_from = models.CharField(max_length=30,default='from')
+    dest_to = models.CharField(max_length=30, default='to')
+    train_id = models.IntegerField(default=000)
+    chair_class= models.CharField(max_length=15,default="class")
+    total_seat = models.IntegerField(default=0)
+    arrv_tym = models.TimeField(default='00:00:00')
+    dep_tym = models.TimeField(default='00:00:00')
+    passenger_un = models.CharField(max_length=20,default='name')
+
