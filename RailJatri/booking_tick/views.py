@@ -53,9 +53,12 @@ def seat_select(request):
     t_num= int(tick.train_number)
     cost = int(tick.fare)
     price = cost*z
-    ticket = ticket_info(cost=price,passenger_name=user_id,train_name=t_name,dest_from=x,dest_to=xx,train_id=t_num,chair_class=y,total_seat=z,arrv_tym=arrv_tym,dep_tym=dep_tym,passenger_un=user_name)
-    ticket.save()
+
     if request.method == "POST":
+        ticket = ticket_info(cost=price, passenger_name=user_id, train_name=t_name, dest_from=x, dest_to=xx,
+                             train_id=t_num, chair_class=y, total_seat=z, arrv_tym=arrv_tym, dep_tym=dep_tym,
+                             passenger_un=user_name)
+        ticket.save()
         return redirect('pay_select')
 
     return render(request,'seat_selection.html',{'first_name':user_id,'email':user_email,'info':infos,'name':train_i,'fare':price})

@@ -41,7 +41,7 @@ class CreateUser(UserCreationForm):
             'type':'email',
             'class':'form-control item',
             'placeholder': 'johndoe@mail.com',
-            'maxlength':'25',
+            'maxlength':'40',
         })
         self.fields['password1'].widget.attrs.update({
             'required':'',
