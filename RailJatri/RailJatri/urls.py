@@ -20,9 +20,8 @@ import booking_tick.views as search
 import payment_method.views as pay_method
 
 import list_trains.views as list
-import journey_schedule.views as journey
 
-
+from django.contrib.auth import views as auth_views
 import change_profile.views as change
 import contactus.views as contactus
 import create_acc.views as registraion
@@ -40,34 +39,34 @@ from home.views import (
     ResetPasswordConfirm
 )
 
-
+from change_profile.form import MyPasswordChangeForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #login &  registraion
     path('',home_view.home_page,name='login'),
+    path('registration/', registraion.registration, name='registration'),
+    #ticket
     path('search_tick/',search.booking_ticket,name='search_tick'),
     path('select_seat/',search.seat_select,name='select_seat'),
     path('success/',search.succesful,name='success'),
     path('tick_det/',search.tick_details,name='tick_det'),
     path('bkash_pay/',search.bkash,name='bkash_pay'),
-    path('card_pay/',pay_method.card,name='card_pay'),
-    path('nexus_pay/',pay_method.nexus,name='nexus_pay'),
+    #other pay_method
     path('pay_select/',search.pay_cat,name='pay_select'),
     path('rocket_pay/',pay_method.rocket,name='rocket_pay'),
-
+    path('card_pay/',pay_method.card,name='card_pay'),
+    path('nexus_pay/',pay_method.nexus,name='nexus_pay'),
     path('list_trains/',list.list_train,name='list_trains'),
-    path('previous/', journey.prev,name='previous'),
-    path('changemail/',change.changeEmail,name='changemail'),
+    #user_profile
+    path('upcoming/',change.journey_details,name='upcoming'),
     path('changenum/',change.changenum,name='changenum'),
-    path('changepass',change.changePass,name='changepass'),
     path('infoupdate/',change.updateInfo,name='infoupdate'),
     path('contactus/',contactus.contactus,name='contactus'),
-    path('registration/',registraion.registration,name='registration'),
-    # path('passchange/',forget.forgotChangepass,name='passchange'),
-    # path('forgetpass/',passforget.forgetPass,name='forgetpass'),
-    path('upcoming/',journey.upcoming,name='upcoming'),
-    #path('saveenquiry/',views.saveEnquiry, name='saveenquiry'),
-    # path('pdf_view/',search.ViewPDF.as_view(),name='pdf_view'),
+    #password_chng
+    path('passwordchange/', auth_views.PasswordChangeView.as_view(template_name='changepass.html', form_class=MyPasswordChangeForm, success_url='/passwordchangedone/'), name='changepassword'),
+    path('passwordchangedone/',auth_views.PasswordChangeDoneView.as_view(template_name='passwordchangedone.html'), name='passwordchangedone'),
+    #for rest_pass
     path('password_reset/', SendEmailToResetPassword.as_view(), name='password_reset'),
     path('password_reset/done/', PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', ResetPasswordConfirm.as_view(), name='password_reset_confirm'),

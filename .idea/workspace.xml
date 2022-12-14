@@ -5,21 +5,148 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a1c4d2e-e7e3-4840-b11d-4475854e9390" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RailJatri/change_profile/migrations/0003_profile_update_f_add.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailJatri/change_profile/migrations/0004_alter_profile_update_ph_nmbr_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailJatri/change_profile/migrations/0005_alter_profile_update_ph_nmbr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/passwordchangedone.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/RailJatri/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/RailJatri/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/RailJatri/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/RailJatri/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/bkash_payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/bkash_payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/payment selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/payment selection.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/seat_selection.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/seat_selection.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/successful.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/successful.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/templates/ticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/templates/ticket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/booking_tick/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/booking_tick/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/templates/changemail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/templates/changenum.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/changenum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/templates/changepass.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/changepass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/templates/updateinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/updateinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/change_profile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/create_acc/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/create_acc/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RailJatri/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/forgetChangePass/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/forgetChangePass/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/forgetPass/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/forgetPass/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RailJatri/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/home/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/Contact-Form-Clean.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/Features-Boxed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/Features-Clean.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/Login-Form-Dark.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/Toggle-Switches.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/animation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/animation1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/registerpagebutton.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/smoothproducts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/css/success.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/Simple-Line-Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/Simple-Line-Icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/ionicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/ionicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/ionicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/ionicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/ionicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/fonts/simple-line-icons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/avatars/avatar5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/bkash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/dogs/image1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/dogs/image2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/dogs/image3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nature/image9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/nexus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/rocket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/scenery/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/scenery/image3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/scenery/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/scenery/image5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/scenery/image6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/star-empty.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/star-half-empty.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/star-sky.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/image3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/image4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/tech/image6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/traain3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/train1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/train2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/train4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/train5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/train6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/train7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/img/white.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/js/bs-init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/js/chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/js/smoothproducts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/static/assets/js/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/templates/prev.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/templates/upcoming.html" beforeDir="false" afterPath="$PROJECT_DIR$/RailJatri/change_profile/templates/upcoming.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RailJatri/journey_schedule/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +156,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -49,17 +176,24 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IX0CH2nuDXlyS8xFe6wkpHQ4Jr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;last_opened_file_path&quot;: &quot;D:/Safi/final/RailJatri&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RailJatri/change_profile/templates" />
+  </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Saafi\CSE310\RailJatri\RailJatri\change_profile\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Saafi\CSE310\RailJatri\RailJatri\change_profile\templates" />
       <recent name="F:\Saafi\CSE310\New folder\RailJatri\RailJatri\booking_tick\templates" />
       <recent name="D:\Safi\RailJatri\Trash" />
     </key>
@@ -85,5 +219,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

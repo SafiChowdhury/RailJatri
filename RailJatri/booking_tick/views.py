@@ -91,20 +91,6 @@ def succesful(request):
         return redirect('tick_det')
     return render(request, 'successful.html', {'info': infos})
 
-
-# class ViewPDF(View):
-#     def get(self, request, *args, **kwargs):
-#         current_user = request.user
-#         user_name = current_user.username
-#         infos = ticket_info.objects.filter(passenger_un=user_name).last()
-#         j_date = journey.objects.filter(passenger_nm=user_name).last()
-#         data={
-#             'info': infos,
-#             'date': j_date,
-#         }
-#         pdf = render_to_pdf('ticket.html',data)
-#         return HttpResponse(pdf, content_type='application/pdf')
-
 def tick_details(request):
     current_user = request.user
     user_name = current_user.username

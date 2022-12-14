@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     'payment_method',
     'list_trains',
-    'journey_schedule',
     'change_profile',
     'contactus',
     'create_acc',
